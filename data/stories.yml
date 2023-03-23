@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+
+
+- story: play game
+  steps:
+  - intent: request_play
+  - action: utter_make_choice
+  - intent: choice
+  - action: action_play_rps
+  - action: utter_play_again
+
+- story: games score
+  steps:
+  - intent: request_games_score
+  - action: action_show_score
+
+- story: cheer up
+  steps:
+  - intent: copium
+  - action: utter_cheer_up
+  - action: utter_play_again

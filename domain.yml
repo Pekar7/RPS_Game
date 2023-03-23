@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - request_play
+  - choice
+  - request_games_score
+  - copium
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+entities:
+  - choice
+
+slots:
+  choice:
+    type: categorical
+    values:
+      - камень
+      - ножницы
+      - бумага
+    mappings:
+    - type: from_entity
+      entity: choice
+
+responses:
+  utter_greet:
+  - text: "Привет! Я бот для игры в камень/ножницы/бумага. Сообщи мне как захочешь сыграть"
+
+  utter_make_choice:
+  - text: "Отлично! Делай свой выбор"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_play_again:
+    - text: "Сыграем еще раз?"
+
+  utter_cheer_up:
+    - text: "Не расстраивайся! Повезет в следующий раз"
+
+actions:
+  - action_play_rps
+  - action_show_score
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

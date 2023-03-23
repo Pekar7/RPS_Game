@@ -1,0 +1,98 @@
+version: "3.1"
+
+nlu:
+- intent: choice
+  examples: |
+    - [камень](choice)
+    - [ножницы](choice)
+    - [бумага](choice)
+
+- intent: request_play
+  examples: |
+    - хочу сыграть
+    - давай сыграем
+    - а не сыграть ли нам
+    - давно не играли
+    - как насчет того чтобы сыграть
+    - давай поиграем
+    - может сыграем
+    - может сыграть
+    - давай еще
+    - сыграем еще раз
+    - еще раз сыграем
+    - хочу еще сыграть
+
+- intent: request_games_score
+  examples: |
+    - счет
+    - какой счет
+    - сколько раз я побеждал
+    = сколько раз ты побеждал
+    - сколько побед
+    - сколько раз я выиграл
+    - счет встреч
+    - счет противостояний
+
+- intent: copium
+  examples: |
+    - не верю
+    - я расстроен
+    - я расстроился
+    - я огорчен
+    - я плачу
+    - ну почему так
+    - да как так-то
+    - да блин
+    - не везет
+    - да почему
+
+- intent: greet
+  examples: |
+    - Привет
+    - Здравствуйте
+    - Приветствую
+    - Добрый вечер
+    - Добрый день
+    - На связи
+    - Я тут
+    - Вы тут?
+    - Вы здесь?
+    - Есть кто?
+    - Доброго времени суток
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
